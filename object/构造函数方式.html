@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Box(name,age){
+            this.name = name;
+            this.age = age;
+            this.say = function(){
+                return this.name + this.age;
+            }
+        }
+        var box1 = new Box("jack",18);
+        alert(box1.say())
+        alert(box1 instanceof Object);
+        var o = new Object();
+        Box.call(o,"Lee",10);               //对象冒充 空对象可以获取Box对象所有的属性和方法
+
+
+    </script>
+</body>
+</html>

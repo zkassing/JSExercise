@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>工厂模式创建对象</title>
+</head>
+<body>
+    <script>
+    function createObj(name,age){
+        var obj = new Object();         //创建对象
+        obj.name = name;                //添加属性
+        obj.age = age;
+        obj.say = function(){           //添加方法
+            return this.name+this.age;  
+        }
+        return obj;                     //返回对象引用
+    }
+    var box1 = createObj("jack",18);
+    var box2 = createObj("tom",22);
+    alert(box1.say());
+    </script>
+    
+</body>
+</html>
