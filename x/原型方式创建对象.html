@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型方式创建对象</title>
+</head>
+<body>
+    <script>
+        //原型
+        function Box(){}//构造函数函数体内什么都没有，如果有就叫实例属性，实例方法
+
+        Box.prototype.name = "zhangkuan";//原型属性
+        Box.prototype.age = 100;  //原型属性
+        Box.prototype.say = function (){
+            return this.name + this.age;
+        }
+        var box1 = new Box();
+        var box2 = new Box();
+        //如果是实例方法，不同的实例化，方法地址唯一
+        //如果是原型方法，地址共享，大家都是一样的
+        // alert(box1.say == box2.say);
+
+        alert(box1.__protp__)
+    </script>
+</body>
+</html>
